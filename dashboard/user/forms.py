@@ -29,7 +29,7 @@ class AddUserForm(forms.ModelForm):
     password = forms.CharField(required=True, label='Password',
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
-    password1 = forms.CharField(required=True, label='Repeat password',
+    password1 = forms.CharField(required=True, 
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
     class Meta:

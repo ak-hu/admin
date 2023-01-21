@@ -26,7 +26,7 @@ def profile(request):
         'title': 'User Manager Dashboard'
     }
 
-    return render(request, 'user/profile.html', context)
+    render(request, 'user/profile.html', context)
 
 
 @login_required(login_url='login')
@@ -56,7 +56,7 @@ def edit(request, pk):
     else:
         form = UpdateUserForm(instance=user)
     context = {
-        'title': 'Update User',
+        'title': '',
         'form': form
     }
     return render(request, 'user/edit_profile.html', context)

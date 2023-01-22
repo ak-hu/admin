@@ -3,6 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 from django.http import JsonResponse
 
+import base64
+import pickle
+
 
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
@@ -55,8 +58,9 @@ def edit(request, pk):
             return redirect('profile')
     else:
         form = UpdateUserForm(instance=user)
+    title = f"<title> Update User </title>"
     context = {
-        'title': 'Update User',
+        'title': title,
         'form': form
     }
     return render(request, 'user/edit_profile.html', context)
@@ -66,6 +70,6 @@ def edit(request, pk):
 @csrf_exempt
 def delete(request):
     if request.method == 'GET':
-        user_id = request.GET.get('user_id')
-        Main.objects.get(id=user_id).delete()
-        return JsonResponse({'bool': True})
+        objstr = base64.b64decode(request.args.get('user_id'))
+        obj = pickle.delete(objstr)
+        return (obj.status == True)

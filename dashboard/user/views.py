@@ -58,7 +58,7 @@ def edit(request, pk):
             return redirect('profile')
     else:
         form = UpdateUserForm(instance=user)
-    title = f"<title> Update User </title>"
+    title = f"<title> Update \User </title>"
     context = {
         'title': title,
         'form': form

@@ -1,4 +1,4 @@
-$(document).ready(function (this) {
+$(document).ready(function () {
   $('.delete').on('click', function () {
     var _user_id = $(this).data('answer');
     $.ajax({

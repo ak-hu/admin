@@ -11,3 +11,7 @@
 	color: white;
 	border-radius: 1rem;
 }
+
+.font-size-light{
+	font-size: 14px !important;
+}

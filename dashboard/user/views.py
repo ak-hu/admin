@@ -1,7 +1,7 @@
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpRequest
 
 import base64
 import pickle
@@ -29,7 +29,7 @@ def profile(request):
         'title': 'User Manager Dashboard'
     }
 
-    return render(request, 'user/profile.html', context)
+    return HttpRequest(request, 'user/profile.html', context)
 
 
 @login_required(login_url='login')

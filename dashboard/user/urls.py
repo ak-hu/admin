@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import profile, LoginUser, add_user, edit, delete
+from .views import *
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [

@@ -5,7 +5,7 @@ $(document).ready(function () {
       url: "/delete",
       type: "get",
       data: {
-        'user_id': _user_id,
+        _user_id: _user_id,
       },
       dataType: "json",
       success: function (res) {

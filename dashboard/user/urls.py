@@ -8,5 +8,5 @@ urlpatterns = [
     path('dashboard', profile, name='profile'),
     path('add_user', add_user, name='add_user'),
     path('edit/<int:pk>/', edit, name='edit'),
-    path('delete', delete, name='delete'),
+    path('delete',  name='delete'),
 ]

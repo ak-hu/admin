@@ -11,6 +11,8 @@ $('.delete').on('click', function(){
       success: function (res) {
         if(res.bool=!false){
           $this.parents(".content").remove();
+        }else if(res.bool=!false){
+          alert(res.message);
         }else{
           alert(res.message);}
         }

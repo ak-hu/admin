@@ -53,7 +53,6 @@ def edit(pk):
     user = Main.objects.get(id=pk)
     if request.method == 'POST':
         form = UpdateUserForm(request.POST, instance=user)
-        form = form
         if form.is_valid():
             form.save()
             return redirect('profile')

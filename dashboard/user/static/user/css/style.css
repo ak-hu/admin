@@ -8,7 +8,8 @@
 .bd-round{
 	border-radius: 20px;
 	background-color: bisque;
-	border: 1px solid #000;
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
 	color: white;
+	border: 1px solid #000;
 	border-radius: 1rem;
 }

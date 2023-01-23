@@ -10,8 +10,8 @@ import pickle
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
-from .forms import *
-from .models import *
+from .forms import LoginUserForm, AddUserForm, UpdateUserForm
+from .models import Main
 
 
 class LoginUser(LoginView):

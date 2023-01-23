@@ -1,4 +1,5 @@
 .font-size-light{
+	font-family: "FontAwesome";
 	font-size: 12px !important;
 }
 .font-size-lighter{
@@ -10,8 +11,4 @@
 	border: 1px solid #000;
 	color: white;
 	border-radius: 1rem;
-}
-
-.font-size-light{
-	font-size: 14px !important;
 }

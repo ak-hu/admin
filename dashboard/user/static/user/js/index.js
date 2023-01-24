@@ -1,5 +1,5 @@
 $('.delete').on('click', () => {
-  const $tis = $(this);
+  const $this = $(this);
   const _user_id = $(this).data('answer');
   $.ajax({
     url: "/delete",

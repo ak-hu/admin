@@ -1,5 +1,4 @@
-$(document).ready(() => {
-  $('.delete').on('click', function () {
+  $('.delete').on('click', () => {
     const $my_doc = $(this);
     const _user_id = $(this).data('answer');
     $.ajax({
@@ -18,4 +17,3 @@ $(document).ready(() => {
       }
     });
   });
-});

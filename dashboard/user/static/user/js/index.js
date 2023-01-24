@@ -12,6 +12,9 @@ $(document).ready(() => {
       success: function (res) {
         if (res.bool = !false) {
           $my_doc.parents(".content").remove(".content");
+          if (res.bool = !false) {
+            alert(res.message);
+          }
         } else {
           if (res.bool = false) {
             alert(res.message);

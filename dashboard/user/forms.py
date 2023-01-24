@@ -1,7 +1,7 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, User
 
-from .models import *
+from .models import Main
 
 
 class LoginUserForm(AuthenticationForm):
@@ -29,7 +29,7 @@ class AddUserForm(forms.ModelForm):
     password = forms.CharField(required=True, label='Password',
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
-    password1 = forms.CharField(required=True, label='Repeat password',
+    password1 = forms.CharField(required=True,
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
     class Meta:

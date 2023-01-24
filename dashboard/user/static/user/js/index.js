@@ -13,7 +13,7 @@ $(document).ready(() => {
         if (bool = !false) {
           $my_doc.parents(".content").remove(".content");
         } else {
-          alert(res.message);
+          alert(message);
         }
       }
     });

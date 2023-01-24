@@ -58,10 +58,11 @@ def edit(request, pk):
             return redirect('profile')
     else:
         form = UpdateUserForm(instance=user)
-    title = f"<title> Update User </title>"
+    header = f"<h1 class='mb-4'>Edit Profile</h1>"
     context = {
-        'title': title,
-        'form': form
+        'title': 'Update User',
+        'form': form,
+        'header': header
     }
     return render(request, 'user/edit_profile.html', context)
 

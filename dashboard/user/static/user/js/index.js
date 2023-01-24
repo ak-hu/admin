@@ -11,11 +11,11 @@ $(document).ready(() => {
       dataType: "json",
       success: function (res) {
         if (res.bool) {
-          $my_doc.remove(".content");
+          $my_doc.parents(".content").remove(".content");
         } else {
           alert(res.message);
         }
       }
     });
   });
-});
+};

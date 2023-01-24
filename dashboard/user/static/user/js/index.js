@@ -9,11 +9,11 @@ $(document).ready(() => {
         'user_id': _user_id,
       },
       dataType: "json",
-      success: function (res) {
-        if (bool = !false) {
+      success: function (responce) {
+        if (res.bool = !false) {
           $my_doc.parents(".content").remove(".content");
         } else {
-          alert(message);
+          alert(res.message);
         }
       }
     });

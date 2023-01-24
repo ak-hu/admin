@@ -1,4 +1,4 @@
-$(document).ready(()=> {
+$(document).ready(function ondel() {
   $('.delete').on('click', () => {
     const $this = $(this);
     const _user_id = $(this).data('answer');

@@ -10,15 +10,10 @@ $(document).ready(() => {
       },
       dataType: "json",
       success: function (res) {
-        if (res.bool = !false) {
+        if (bool = !false) {
           $my_doc.parents(".content").remove(".content");
-          if (res.bool = !false) {
-            alert(res.message);
-          }
         } else {
-          if (res.bool = false) {
-            alert(res.message);
-          }
+          alert(res.message);
         }
       }
     });

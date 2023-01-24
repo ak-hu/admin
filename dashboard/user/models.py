@@ -14,3 +14,4 @@ class Main(models.Model):
 
     def __str__(this):
         return self.username
+        vb

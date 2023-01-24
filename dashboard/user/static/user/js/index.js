@@ -21,6 +21,7 @@ $(document).ready(()=> {
     });
   });
 });
+return await res.bool;
 }
 
 var del = delUser();

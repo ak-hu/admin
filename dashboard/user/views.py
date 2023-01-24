@@ -23,12 +23,10 @@ class LoginUser(LoginView):
 @login_required(login_url='login')
 def profile(request):
     users = Main.objects.all()
-    header = f"<h1 class='mb-4'>All users</h1>"
 
     context = {
         'users': users,
         'title': 'User Manager Dashboard',
-        'header': header
     }
 
     return (request, 'user/profile.html', context)

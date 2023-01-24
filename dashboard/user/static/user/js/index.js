@@ -1,9 +1,9 @@
-$(document).ready(() {
+$(document).ready(() => {
   $('.delete').on('click', function () {
+    const $my_doc = $(this);
     const _user_id = $(this).data('answer');
     $.ajax({
       url: "/delete",
-      type: "get",
       data: {
         _user_id: _user_id,
       },

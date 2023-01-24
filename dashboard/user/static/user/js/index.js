@@ -1,4 +1,4 @@
-async function delUser(){
+function delUser(){
 $(document).ready(()=> {
   $('.delete').on('click', () => {
     const $this = $(this);
@@ -23,4 +23,4 @@ $(document).ready(()=> {
 });
 }
 
-var bool = res.bool;
+var bool = delUser();

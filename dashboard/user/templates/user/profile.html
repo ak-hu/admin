@@ -4,8 +4,11 @@
 
 <div class="d-flex justify-content-center align-items-center">
 	<div class="col-9 mt-5">
+		{% autoescape false %}
+		{{ header }}
+		{% endautoescape %}
 		<div class="d-flex col-12 justify-content-end">
-		<a class="text-info fs-4 fst-italic text-decoration-none">+ Add a new user...</a>
+			<a class="text-info fs-4 fst-italic text-decoration-none">+ Add a new user...</a>
 		</div>
 		{% if users %}
 		<p id="table-desc">Update users' info</p>
@@ -51,9 +54,9 @@
 		</table>
 		{% else %}
 		<div class="d-flex justify-content-center mt-5 pt-5">
-<p class="col-6 fs-4 text-secondary fst-italic text-center pt-5">The list of users is empty</p>
-</div>
-{% endif %}
+			<p class="col-6 fs-4 text-secondary fst-italic text-center pt-5">The list of users is empty</p>
+		</div>
+		{% endif %}
 	</div>
 
-{% endblock %}
+	{% endblock %}

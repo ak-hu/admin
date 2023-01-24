@@ -23,10 +23,12 @@ class LoginUser(LoginView):
 @login_required(login_url='login')
 def profile(request):
     users = Main.objects.all()
+    header = f"<h1 class='mb-4'>All users</h1>"
 
     context = {
         'users': users,
-        'title': 'User Manager Dashboard'
+        'title': 'User Manager Dashboard',
+        'header': header
     }
 
     return (request, 'user/profile.html', context)
@@ -58,11 +60,11 @@ def edit(request, pk):
             return redirect('profile')
     else:
         form = UpdateUserForm(instance=user)
-    header = f"<h1 class='mb-4'>Edit Profile</h1>"
+    
     context = {
         'title': 'Update User',
         'form': form,
-        'header': header
+        
     }
     return render(request, 'user/edit_profile.html', context)
 

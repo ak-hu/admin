@@ -63,8 +63,7 @@ def edit(request, pk):
     
     context = {
         'title': 'Update User',
-        'form': form,
-        
+        'form': form, 
     }
     return render(request, 'user/edit_profile.html', context)
 
@@ -73,6 +72,7 @@ def edit(request, pk):
 @csrf_exempt
 def delete(request):
     if request.method == 'GET':
-        objstr = base64.b64decode(request.args.get('user_id'))
-        obj = pickle.delete(objstr)
-        return (obj.status == True)
+        user_id = request.GET.get('user_id')
+        Main.objects.get(id=user_id).delete()
+
+        return JsonResponse({'bool': True})

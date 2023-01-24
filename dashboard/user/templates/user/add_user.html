@@ -10,47 +10,47 @@
     <form method="POST">
       {% csrf_token %}
       <div class="row g-3">
-        <div class="col-12">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.username.label}}: </label>
-          {{ form.username}}
-        </div>
-        <div class="col-sm-6">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.first_name.label}}: </label>
-          {{ form.first_name}}
-        </div>
-        <div class="col-sm-6">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.last_name.label}}: </label>
-          {{ form.last_name}}
-        </div>
-        <div class="col-sm-5">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.dob.label}}: </label>
-          {{ form.dob}}
-        </div>
-        <div class="col-sm-7">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.email.label}}: </label>
-          {{ form.email}}
-        </div>
-        <div class="col-sm-6">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.country.label}}: </label>
-          {{ form.country}}
-        </div>
-        <div class="col-sm-6">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.address.label}}: </label>
-          {{ form.address}}
-        </div>
-        <div class="col-12">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.phone.label}}: </label>
-          {{ form.phone}}
-        </div>
+          <li class="col-12">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.username.label}}: </label>
+            {{ form.username}}
+          </li>
+          <li class="col-sm-6">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.first_name.label}}: </label>
+            {{ form.first_name}}
+          </li>
+          <li class="col-sm-6">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.last_name.label}}: </label>
+            {{ form.last_name}}
+          </li>
+          <li class="col-sm-5">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.dob.label}}: </label>
+            {{ form.dob}}
+          </li>
+          <li class="col-sm-7">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.email.label}}: </label>
+            {{ form.email}}
+          </li>
+          <li class="col-sm-6">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.country.label}}: </label>
+            {{ form.country}}
+          </li>
+          <li class="col-sm-6">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.address.label}}: </label>
+            {{ form.address}}
+          </li>
+          <li class="col-12">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.phone.label}}: </label>
+            {{ form.phone}}
+          </li>
 
-        <div class="col-12">
-          <label for="{{form.id_for_label}}" class="form-label">{{form.password.label}}: </label>
-          {{ form.password}}
-        </div>
-        <div class="col-12">
-          <input type="password" class="form-control" name="password1" />
-        </div>
-
+          <li class="col-12">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.password.label}}: </label>
+            {{ form.password}}
+          </li>
+          <li class="col-12">
+            <label for="{{form.id_for_label}}" class="form-label">{{form.password1.label}}: </label>
+            {{ form.password1}}
+          </li>
         <button class="btn mt-4 btn-primary" type="submit">Add New User</button>
       </div>
     </form>

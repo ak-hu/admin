@@ -14,9 +14,9 @@
 </head>
 
 <body class="bg-light">
-  <div class="col-12">
-    <input>
-  </div>
+  {% autoescape false %}
+  {{ header }}
+  {% endautoescape %}
   {% include 'user/header.html' %}
   {% block content %}{% endblock %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,4 +28,5 @@
     crossorigin="anonymous"></script>
   <script src="{% static 'user/js/index.js' %}"></script>
 </body>
+
 </html>

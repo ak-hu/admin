@@ -32,7 +32,7 @@ class AddUserForm(forms.ModelForm):
     password1 = forms.CharField(required=True, label='Repeat password',
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
-    
+    class Meta:
         model = Main
         fields = ['username', 'first_name', 'last_name', 'email', 'dob', 'country', 'address', 'phone',
                   'password', 'password1']

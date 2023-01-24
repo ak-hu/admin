@@ -10,7 +10,7 @@ import pickle
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
-from .forms import LoginUserForm, AddUserForm, UpdateUserForm
+from .forms import LoginUserForm, UpdateUserForm
 from .models import Main
 
 

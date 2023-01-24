@@ -23,5 +23,5 @@ $(document).ready(()=> {
 });
 }
 
-var bool = delUser();
+delUser();
 sdfds

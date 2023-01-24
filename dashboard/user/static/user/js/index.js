@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $('.delete').on('click', function () {
-    const _user_id = $(this).data('answer');
+    _user_id = $(this).data('answer');
     $.ajax({
       url: "/delete",
       type: "get",

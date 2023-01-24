@@ -12,5 +12,5 @@ class Main(models.Model):
     phone = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
 
-    def __str__(self):
+    def __str__():
         return this.username

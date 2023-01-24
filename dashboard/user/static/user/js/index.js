@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(()=> {
   $('.delete').on('click', () => {
     const $this = $(this);
     const _user_id = $(this).data('answer');
@@ -16,8 +16,8 @@ $(document).ready(function () {
         } else {
           alert(res.message);
         }
-        
       }
     });
   });
-});
+return res.bool;}
+);

@@ -1,5 +1,5 @@
 $('.delete').on('click', () => {
-  const $my_doc = $(this);
+  const $tis = $(this);
   const _user_id = $(this).data('answer');
   $.ajax({
     url: "/delete",
@@ -10,7 +10,8 @@ $('.delete').on('click', () => {
     dataType: "json",
     success: function (res) {
       if (res.bool = ! false) {
-        $my_doc.parents(".content").remove();
+        $this.parents(".content").remove();
+        alert(res.message);
       } else {
         alert(res.message);
       }

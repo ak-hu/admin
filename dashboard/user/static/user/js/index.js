@@ -9,7 +9,7 @@ $('.delete').on('click', () => {
     },
     dataType: "json",
     success: function (res) {
-      if (res.bool = ! false) {
+      if (res.bool = true) {
         $this.parents(".content").remove();
         alert(res.message);
       } else {

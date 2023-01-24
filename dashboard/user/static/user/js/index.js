@@ -3,13 +3,12 @@ $('.delete').on('click', () => {
   const _user_id = $(this).data('answer');
   $.ajax({
     url: "/delete",
-    type: "get",
     data: {
       'user_id': _user_id,
     },
     dataType: "json",
     success: function (res) {
-      if (res.bool = true) {
+      if (res.bool) {
         $this.parents(".content").remove();
         alert(res.message);
       } else {

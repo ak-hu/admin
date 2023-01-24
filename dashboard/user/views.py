@@ -18,12 +18,12 @@ class LoginUser(LoginView):
 def profile(request):
     users = Main.objects.all()
 
-    return (request, 'user/profile.html')
-
     context = {
         'users': users,
         'title': 'User Manager Dashboard',
     }
+
+    return (request, 'user/profile.html')
 
 
 @login_required(login_url='login')

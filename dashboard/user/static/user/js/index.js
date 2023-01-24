@@ -10,7 +10,7 @@ $(document).ready(function () {
       },
       dataType: "json",
       success: function (res) {
-        if (res.bool) {
+        if (res.bool != false) {
           $this.parents(".content").remove();
           alert(res.message);
         } else {

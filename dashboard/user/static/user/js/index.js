@@ -6,12 +6,12 @@ $(document).ready(() => {
       url: "/delete",
       type: "get",
       data: {
-        'user_id': _user_id,
+        user_id: $(this).data('answer'),
       },
       dataType: "json",
-      success: function (responce) {
-        if (res.bool = !false) {
-          $my_doc.parents(".content").remove(".content");
+      success: function (res) {
+        if (res.bool) {
+          $my_doc.parents(".content").remove();
         } else {
           alert(res.message);
         }

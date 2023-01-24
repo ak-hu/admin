@@ -11,7 +11,6 @@
 		{% if users %}
 		<p id="table-desc">Update users' info</p>
 		<table aria-describedby="table-desc" class="table mt-3 table-striped text-sm-start fw-light text">
-			<thead class="text-center fw-light">
 				<tr>
 					<th scope="col">Username</th>
 					<th scope="col">Name</th>
@@ -24,7 +23,6 @@
 					<th scope="col">Password</th>
 					<th scope="col">Actions</th>
 				</tr>
-			</thead>
 
 			{% for u in users %}
 			<tbody>

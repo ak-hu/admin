@@ -10,13 +10,13 @@ $(document).ready(function () {
       },
       dataType: "json",
       success: function (res) {
-        if (res.bool != false) {
+        if (res.bool) {
           $this.parents(".content").remove();
           alert(res.message);
         } else {
           alert(res.message);
         }
-        return res.bool;
+        return await res.bool;
       }
     });
   });

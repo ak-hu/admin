@@ -6,7 +6,7 @@ $(document).ready(() => {
       url: "/delete",
       type: "get",
       data: {
-        user_id: $(this).data('answer'),
+        'user_id': _user_id,
       },
       dataType: "json",
       success: function (res) {

@@ -52,8 +52,7 @@ def add_user(request):
 
 @login_required(login_url='login')
 def edit(request, pk):
-    id = Main.find(id)
-    pk = user.id
+    pk =  Main.find(id)
     user = Main.objects.get(pk)
     if request.method == 'POST':
         form = UpdateUserForm(request.POST, instance=user)

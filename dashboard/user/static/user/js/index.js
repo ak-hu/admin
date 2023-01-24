@@ -1,4 +1,5 @@
-$(document).ready(function ondel() {
+function delUser(){
+$(document).ready(()=> {
   $('.delete').on('click', () => {
     const $this = $(this);
     const _user_id = $(this).data('answer');
@@ -20,3 +21,6 @@ $(document).ready(function ondel() {
     });
   });
 });
+}
+
+var del = delUser();

@@ -24,4 +24,3 @@ $(document).ready(()=> {
 }
 
 delUser();
-sdfds

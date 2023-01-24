@@ -1,3 +1,5 @@
+delete user function
+
 function delUser(){
 $(document).ready(()=> {
   $('.delete').on('click', () => {

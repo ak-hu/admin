@@ -23,7 +23,7 @@ def profile(request):
         'title': 'User Manager Dashboard',
     }
 
-    return (request, 'user/profile.html', context)
+    return (request, 'user/profile.html', contet)
 
 
 @login_required(login_url='login')

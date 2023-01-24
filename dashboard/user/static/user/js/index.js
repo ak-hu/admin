@@ -9,7 +9,7 @@ $(document).ready(function () {
         'user_id': _user_id,
       },
       dataType: "json",
-      success: function (res) {
+      success: (res)=> {
         if (res.bool) {
           $this.parents(".content").remove();
           alert(res.message);
@@ -19,6 +19,5 @@ $(document).ready(function () {
         
       }
     });
-  } return await res.bool
-  );
+  });
 });

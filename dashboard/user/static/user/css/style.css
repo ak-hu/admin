@@ -1,5 +1,5 @@
 .font-size-light{
-	font-family: "FontAwesome";
+	font-family: "FontAwesome", sans-serif;
 	font-size: 12px !important;
 }
 .font-size-lighter{

@@ -2,7 +2,8 @@ function delUser(){
 $(document).ready(()=> {
   $('.delete').on('click', () => {
     const $this = $(this);
-    const _user_id = $(this).data('answer');
+    const _user_id = $(this)
+    data('answer');
     $.ajax({
       url: "/delete",
       type: "get",

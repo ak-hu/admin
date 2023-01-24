@@ -16,8 +16,9 @@ $(document).ready(function () {
         } else {
           alert(res.message);
         }
-        return await res.bool;
+        
       }
     });
-  });
+  } return await res.bool
+  );
 });

@@ -1,16 +1,10 @@
-
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
-from django.http import JsonResponse, HttpRequest
-
-import base64
-import pickle
-
-
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
-from .forms import LoginUserForm, UpdateUserForm
+from .forms import LoginUserForm, AddUserForm, UpdateUserForm
 from .models import Main
 
 

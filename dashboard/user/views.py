@@ -17,12 +17,10 @@ class LoginUser(LoginView):
 @login_required(login_url='login')
 def profile(request):
     users = Main.objects.all()
-
     context = {
         'users': users,
         'title': 'User Manager Dashboard',
     }
-
     return (request, 'user/profile.html')
 
 

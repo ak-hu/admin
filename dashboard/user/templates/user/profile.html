@@ -4,48 +4,64 @@
 
 <div class="d-flex justify-content-center align-items-center">
 	<div class="col-9 mt-5">
-		
+
 		<div class="d-flex col-12 justify-content-end">
 			<a class="text-info fs-4 fst-italic text-decoration-none">+ Add a new user...</a>
 		</div>
 		{% if users %}
 		<p id="table-desc">Update users' info</p>
 		<table aria-describedby="table-desc" class="table mt-3 table-striped text-sm-start fw-light text">
-				<tr>
-					<td></td>
-					<th scope="col">Username</th>
-					<th scope="col">Name</th>
-					<th scope="col">Surname</th>
-					<th scope="col">Email</th>
-					<th scope="col">Birth date</th>
-					<th scope="col">Country</th>
-					<th scope="col">Address</th>
-					<th scope="col">Phone</th>
-					<th scope="col">Password</th>
-					<th scope="col">Actions</th>
-				</tr>
-
-			{% for u in users %}
-				<tr class="text-center content">
-					<th scope="row" class="pt-3">{{u.username}}</th>
-					<td class="pt-3">{{u.first_name}}</td>
-					<td class="pt-3">{{u.last_name}}</td>
-					<td class="pt-3">{{u.email}}</td>
-					<td class="pt-3">{{u.dob}}</td>
-					<td class="pt-3">{{u.country}}</td>
-					<td class="pt-3">{{u.address}}</td>
-					<td class="pt-3">{{u.phone}}</td>
-					<td class="pt-3">{{u.password}}</td>
-					<td class="">
-						<a href="{% url 'edit' u.id%}" class="btn btn-link">
-							<i class="text-main fas fa-pen"></i>
-						</a>
-						<button class="btn btn-link delete" data-answer="{{u.id}}">
-							<i class="text-danger fas fa-times"></i>
-						</button>
-					</td>
-				</tr>
-			{% endfor %}
+			<tr>
+				<td></td>
+				<th scope="col">Username</th>
+				<th scope="col">Name</th>
+				<th scope="col">Surname</th>
+				<th scope="col">Email</th>
+				<th scope="col">Birth date</th>
+				<th scope="col">Country</th>
+				<th scope="col">Address</th>
+				<th scope="col">Phone</th>
+				<th scope="col">Password</th>
+				<th scope="col">Actions</th>
+			</tr>
+			<tr class="text-center content">
+				<th scope="row" class="pt-3">{{u.username}}</th>
+				<td class="pt-3">{{u.first_name}}</td>
+				<td class="pt-3">{{u.last_name}}</td>
+				<td class="pt-3">{{u.email}}</td>
+				<td class="pt-3">{{u.dob}}</td>
+				<td class="pt-3">{{u.country}}</td>
+				<td class="pt-3">{{u.address}}</td>
+				<td class="pt-3">{{u.phone}}</td>
+				<td class="pt-3">{{u.password}}</td>
+				<td class="">
+					<a href="{% url 'edit' u.id%}" class="btn btn-link">
+						<i class="text-main fas fa-pen"></i>
+					</a>
+					<button class="btn btn-link delete" data-answer="{{u.id}}">
+						<i class="text-danger fas fa-times"></i>
+					</button>
+				</td>
+			</tr>
+			<tr class="text-center content">
+				<th scope="row" class="pt-3">{{u.username}}</th>
+				<td class="pt-3">{{u.first_name}}</td>
+				<td class="pt-3">{{u.last_name}}</td>
+				<td class="pt-3">{{u.email}}</td>
+				<td class="pt-3">{{u.dob}}</td>
+				<td class="pt-3">{{u.country}}</td>
+				<td class="pt-3">{{u.address}}</td>
+				<td class="pt-3">{{u.phone}}</td>
+				<td class="pt-3">{{u.password}}</td>
+				<td class="">
+					<a href="{% url 'edit' u.id%}" class="btn btn-link">
+						<i class="text-main fas fa-pen"></i>
+					</a>
+					<button class="btn btn-link delete" data-answer="{{u.id}}">
+						<i class="text-danger fas fa-times"></i>
+					</button>
+				</td>
+			</tr>
 		</table>
 		{% else %}
 		<div class="d-flex justify-content-center mt-5 pt-5">

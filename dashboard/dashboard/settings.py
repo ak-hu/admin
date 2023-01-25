@@ -76,7 +76,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'PASSWORD': '5.u8@sZv#+^[Aj3:',
     }
 }
 
